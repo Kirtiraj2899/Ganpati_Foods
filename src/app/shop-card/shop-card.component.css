@@ -1,0 +1,93 @@
+
+.container{
+    margin: 20px 0 20px 0;
+    margin-left: 2%;
+}
+.searchbox{
+    font-size: 1rem;
+    width: 20%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    margin-left: 40%;
+   
+}
+
+.content{
+    background: #ebd1d1;
+    border-radius: 25px;
+    text-align: center;  
+    margin: 15px 50px 15px 50px;
+    height: 400px;
+}
+
+
+.cardHeader{
+    width: 95%;
+    height: 200px;
+    margin: 20px 0 19px 10px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .25);
+    background: white;
+    transition: 0.3s ease-in-out;
+}
+
+ .cardHeader:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.container img{
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+
+.desc{
+    height: 100px;
+}
+
+.avlQty{
+    margin-bottom: 10px;
+    padding: 2px;
+    background: white;
+    border-radius: 5px;
+}
+
+
+.diveder{
+    height: 1px;
+    width: 100%;
+    background: black;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.cart-footer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.price{
+    margin-left: 20px;
+}
+.cart-footer i{
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+.cart-footer #wishicon{
+    color: rgb(116, 6, 6);
+}
+
+
+
+
+ label{
+    
+ }
+
+

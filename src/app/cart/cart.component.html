@@ -1,0 +1,74 @@
+<div class="header">
+  <app-navbar *ngIf="!isLoggedIn"></app-navbar>
+  <app-navbar-user *ngIf="isLoggedIn"></app-navbar-user>
+</div>
+<ng-container *ngIf="products.length != 0">
+  <div class="container">
+    <div class="card-table">
+      <div class="card-product">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Sr. No.</th>
+              <th>Product Name</th>
+              <th>product Category</th>
+              <th>Product Image</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of products; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ item.pcompanyname }} {{ item.pname }}</td>
+              <td>{{ item.pcategory }}</td>
+              <td><img  src="{{item.pimage}}" class="proimage"/></td>
+              <td>{{ item.psellprice }}</td>
+              <td (click)="calculateGrandTotal()" ><span class="qty"><button (click)="decs(item)" class="btnqtyinc">-</button>{{ item.quantity }}<button (click)="inc(item)" class="btnqtydecs">+</button></span></td>
+              <td #totalElement>{{ item.quantity * item.psellprice }}</td>
+              <td>
+                <button class="btnremoveItem" (click)="removeItem(item)">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
+              </td>
+            </tr>
+            <tr class="action">
+              <td colspan="4"></td>
+              <td>
+                <button class="btnEmptyCart" (click)="emptycart()">
+                  Empty Cart
+                </button>
+              </td>
+              <td>
+                <button class="btnShopMore" routerLink="/shop">Shop More</button>
+              </td>
+              <td><button class="btnCheckout"  (click)="ConfirmOrder(shippingAddress)" routerLink="/ShippingAdd">Confirm Order</button></td>
+              <td>
+                <strong>Grand Total: <br />₹ {{ grandTotal }}</strong>
+              </td>
+              <router-outlet></router-outlet>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</ng-container>
+
+
+<ng-container *ngIf="products.length == 0">
+  <div class="container">
+    <div class="card">
+      <h4 class="cart-title">My Cart</h4>
+    </div>
+    <div class="center">
+      <img src="assets/Images/cartImg.png" />
+      <h4>Your cart is empty!</h4>
+      <h5>Add item to it now!</h5>
+      <button class="btnShop" routerLink="/">Shop</button>
+    </div>
+  </div>
+</ng-container>

@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "Ganapati-Food",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

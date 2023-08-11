@@ -1,0 +1,264 @@
+.aaaa{
+    color: black;
+  }
+  
+  .container{
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .25);
+    width: 95%;
+    height: 80px;
+    border-radius: 13px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  
+  .menu{
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    grid-gap : 10px;
+    list-style: none;
+    align-items: center;
+    display: flex;
+  }
+  
+  .logo img{
+    margin-top: 5px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+  }
+  
+  .menu ul{
+    display: flex;
+    text-decoration: none;
+    color: #222;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+  }
+  
+  .menu ul li{
+    position: relative;
+    padding: 10px;
+    list-style-type: none;
+  }
+  
+  .menu ul li a{
+    color: #222;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  .menu ul li i{
+    margin-right: 5px;
+  }
+  
+  .menu ul li:hover{
+    background: linear-gradient(45deg,cyan,blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .menu ul li::before{
+    content: '';
+    position: absolute;
+    height: 2.5px;
+    bottom: -5px;
+    width: 0;
+    border-radius: 50px;
+    background: linear-gradient(45deg,cyan,blue);
+    transition: width 0.5s ease;
+  }
+  
+  .menu tl li:hover::before{
+    width: 100%;
+  }
+  
+  
+  
+  .btnSignIN{
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    border-radius: 0.3rem;
+    font-size: 0.5;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    color: #fff;
+    background: linear-gradient(90deg,red,black);
+    height: 40px;
+    
+  }
+  
+  .btnSignIN:hover{
+    background: linear-gradient(90deg,#3a1c71,#d76d77,#ffaf7b);
+    color: #fff
+  }
+  
+  #cartIcon{
+    font-size: 2rem;
+    /* margin-left: 3px; */
+    margin-top: -30px;
+    margin-bottom: 0;
+  }
+  
+  .cart{
+    font-size: 0.9rem;
+    font-weight: 700;
+     margin: -30px 0 0 45px; 
+  }
+  
+  .total-cart{
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(241, 167, 7);
+    margin-left: 22px;
+    /* margin-top: 30px; */
+    margin-bottom: -8px;
+  }
+  
+  .rgistrationDropdown{
+    position: relative;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    height: auto;
+    width: 200px;
+  }
+  
+  .dropdown-content #reg{
+    display: block;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;             
+    padding: 10px;
+  }
+  
+  .dropdown-content #reg:hover{
+    border-radius: 5px;
+   background: #d76d77;
+   color: white;
+  }
+  
+  .rgistrationDropdown:hover .dropdown-content{
+    display: block;
+    
+  }
+  
+  button{
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+ul li .user{
+    font-size: 1rem;
+    margin-top: 2px;
+    align-items: center;
+    border: none;
+    background: transparent;
+    
+}
+
+.user-image{
+    width: 30px;
+    height: 30px;
+    margin-top: -20px;
+}
+
+::ng-deep .mat-menu-content{
+    width: 160px;
+}
+
+  @media only screen and (max-width: 999px){
+    .menu{
+      position: absolute;
+      right: -280px;
+      top: 80px;
+      width: 280px;
+      height: auto;
+      background: #fff;
+      display: block;
+      transition: 0.4s ease-in-out;
+    }
+  
+    .menu ul{
+      display: block;
+      text-align: left;
+      margin: 0;
+      padding: 10px 0 10px 26px;
+    }
+  
+    .menu ul li:hover{
+      background: #01959a;
+      transition: none;
+    }
+  
+    .btnSignIN{
+      text-align: center;
+          padding: 1rem;
+          margin: auto;
+          border-radius: 4px;
+          width: 80%;
+          background: linear-gradient(90deg,#0162c8,#55e7fc);
+          text-decoration: none;
+          color: #fff;
+          font-size: 0.8rem;
+          font-weight: 700;
+          letter-spacing: 2px;
+    }
+  
+    
+  
+    .menu_icon{
+      display: inline-block;
+      position: relative;
+      right: 0;
+      top: 5px;
+    }
+  
+    .menu_icon span{
+      width: 32px;
+      height: 3px;
+      background: #222;
+      display: block;
+      transition: 0.2s ease-in-out;
+    }
+    .menu_icon span:nth-child(2){
+      margin: 4px 0;
+    }
+  
+    .menu_icon_class span:nth-child(2){
+      display: none;
+    }
+  
+    .menu_icon_class span:nth-child(1){
+      transform: rotate(-40deg);
+      margin: -1px;
+    }
+  
+    .menu_icon_class span:nth-child(3){
+      transform: rotate(40deg);
+      margin: -3px;
+    }
+  
+  
+    .menuClass{
+      right: 0;
+      transition: 0.4s ease-in-out;
+    }
+  
+    
+  }

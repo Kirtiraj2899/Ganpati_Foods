@@ -1,0 +1,31 @@
+
+<header>
+  <div class="container">
+     <div class="logo">
+      <img src="assets/Icon/Logo1.png" alt="logo">
+     </div>
+     <div class="menu_icon" [class.menu_icon_class]="menu_icon_variable" (click)="openMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+     </div>
+     <div class="menu" [class.menuClass]="menuVariable" >
+      <ul >
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class="fa fa-home" aria-hidden="true"></i><a routerLink="/" >Home</a></li>
+        <li routerLinkActive="active"><i class="fa fa-info-circle" aria-hidden="true"></i><a routerLink="/about" >About</a></li>
+        <li routerLinkActive="active"><i class="fa fa-briefcase" aria-hidden="true"></i><a routerLink="/product" >Product</a></li>
+        <li routerLinkActive="active"><i class="fa fa-address-book" aria-hidden="true"></i><a routerLink="/contactus" >ContactUs</a></li>
+        <div class="rgistrationDropdown">
+          <li routerLinkActive="active"><i class="fa fa-user" aria-hidden="true"></i>Registration </li>
+          <div class="dropdown-content">
+            <a id="reg"  routerLink="/customerReg">Customer </a>
+            <a id="reg"  routerLink="/ShopReg">Shop</a>
+          </div>
+       </div>
+       <button class="btnSignIN" (click)="openDialogSignIn()">Sign IN</button>
+       
+      </ul>
+      
+     </div>
+  </div>
+</header>

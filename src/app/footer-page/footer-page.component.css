@@ -1,0 +1,27 @@
+.footer{
+    display:flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 5%;
+    font-family: 'Mulish', sans-serif;
+    background: #ebd1d1;
+    color: rgb(167, 8, 8);
+}
+
+.footer h2{
+    color: #222;
+    font-weight: 600;
+}
+
+.accountsFooter i{
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 650px){
+    .footer{
+        display:block;                 
+        flex-direction: column;  
+        text-align: center;    
+    }
+}

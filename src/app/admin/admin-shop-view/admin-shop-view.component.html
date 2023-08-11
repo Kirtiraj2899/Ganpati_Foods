@@ -1,0 +1,39 @@
+<div class="container-fluid page">
+    <div class="page_box ">Shops & Hotels</div>
+    <div class="page_content">
+        <div class="page_content_data">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" >Sr.No.</th>
+                        <th scope="col" >Shop Name</th>
+                        <th scope="col" >Mobile no.</th>
+                        <th scope="col" >Email</th>
+                        <th scope="col" >Address</th>
+                        <th scope="col" >GSt No.</th>
+                        <th scope="col" >Profile Picture</th>
+                        <th scope="col" >Password</th>
+                        <th scope="col" >Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let shop of shopList,let i=index">        
+                        <th scope="row">{{i+1}}</th>
+                        <td  >{{shop.sname}}</td>
+                        <td  >{{shop.smobile}}</td>
+                        <td  >{{shop.semail}}</td>
+                        <td  >{{shop.saddress}}</td>
+                        <td  >{{shop.sgst}}</td>
+                        <td  ><p (change)="onselectFile($event)"><img  src="{{shop.sprofile}}" /></td>
+                        <td  >{{shop.spassword}}</td>
+                        <td class="action">
+                            <span (click)="deleteShop(shop)" class="btndelete"><i class="fa fa-trash" aria-hidden="true"></i></span> &nbsp;
+                            <span routerLink="/addproduct" class="btnedit"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button (click)="exportToExcel()">Export to Excel</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+
+<div class='header'>
+   <app-navbar *ngIf="!isLoggedIn"></app-navbar>
+   <app-navbar-user *ngIf="isLoggedIn"></app-navbar-user>
+    <img alt="ProductImg" src="assets/Images/Productimg.jpeg">
+ </div>
+ <div>
+    <app-product-info-card></app-product-info-card>
+ </div>
+ <div>
+   <app-footer-page></app-footer-page>  
+</div>

@@ -1,0 +1,146 @@
+.contactUs{
+    display: flex;
+    width: 100%;
+    height: 700px;
+    justify-content: center;
+}
+
+.contactUs .contactUsLeft{
+    border: 2px solid;
+    text-align: center;
+    margin: 30px 0 30px 0;   
+    position: relative;
+    border-radius: 25px;
+}
+
+.contactUsLeft img{
+    width: 100%;
+    height: 100%;   
+    border-radius: 25px;
+}
+
+.contactUsLeft .info{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    color: #fff;
+}
+
+.contactUsLeft .info h1{
+    font-weight: 700;
+    color: rgb(167, 8, 8);
+}
+.contactUsLeft .info p{
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.contactUs .contactUsRight{
+    border: 2px solid;
+    margin: 30px 0 30px 0;
+    padding: 50px 50px; 
+    border-radius: 25px;
+    
+}
+
+.contactUsRight .fullName{
+    margin-bottom: 20px;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.fullName label{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+.fullName input{
+    margin: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.contactUsRight .Email{
+    margin-bottom: 20px;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.Email label{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.Email input{
+    margin: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    
+}
+
+.contactUsRight .phone{
+    margin-bottom: 20px;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.phone label{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.phone input{
+    margin: 5px;
+    font-size: 1rem;  
+    border-radius: 5px;
+}
+
+.contactUsRight .message{
+    margin-bottom: 20px;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.message label{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+.message textarea{
+    width: 80%;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.contactUsRight .contactSendbtn{
+    margin-left: 40%;
+    position: relative;
+    color: #fff;
+    padding: 12px 36px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 100vmax;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    background: linear-gradient(90deg,#0162c8,#55e7fc);
+}
+
+.contactUsRight .contactSendbtn:hover{
+    background: linear-gradient(90deg,#755bea,#ff72c0);
+}
+
+@media screen and (max-width: 850px){
+
+    .contactUs{
+        display: block;
+    }
+
+}
+

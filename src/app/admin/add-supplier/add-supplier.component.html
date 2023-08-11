@@ -1,0 +1,38 @@
+<form >
+    <div class="container-fluid page">
+        <div class="page_box ">Supplier</div>
+        <div class="page_content">
+            <h1>Add New Supplier</h1>
+            <form name="addProduct">
+            <div class="page_content_data">
+                    <label>Full Name:</label><br />
+                    <input type="text" placeholder="Eg. Misty Shenoy" formControlName="fullname" [(ngModel)]="supname"/><br />
+                    <span *ngIf="fullname && fullname.invalid && fullname.touched">Please enter valide fullname..</span ><br />
+                    <label>Mobile Number:</label><br />
+                    <input type="text" placeholder="9890123776" formControlName="contact" [(ngModel)]="supmobile"/><br />
+                    <span *ngIf="contact && contact.invalid && contact.touched">Please enter valide mobile number...</span><br />
+                    <label>Email:</label><br />
+                    <input type="email" placeholder="mistyshenoy@gmail.com" formControlName="email" [(ngModel)]="supemail"/><br />
+                    <span *ngIf="email && email.invalid && email.touched">Please enter valide email...</span><br />
+                    <label>Address:</label><br />
+                    <input type="text" placeholder="flt.1 krushna nagar pune" formControlName="address" [(ngModel)]="supaddress"/><br />
+                    <span *ngIf="address && address.invalid && address.touched">Please enter valide address...</span><br />
+                    
+                    <label>Profile Picture:</label><br />
+                    <input type="file" id="myprofile" name="myfile" formControlName="profile" [(ngModel)]="supprofile"/><br />
+                    
+                    <label>Company Name:</label><br />
+                    <input type="text" placeholder="Gowardhan" formControlName="companyname" [(ngModel)]="supcompanyname"/><br />
+                    <span *ngIf="companyname && companyname.invalid && companyname.touched">Please enter valide company name...</span><br />
+                    <label>Password:</label><br />
+                    <input type="password" placeholder="********" formControlName="password" [(ngModel)]="suppassword"/><br />
+                    <span *ngIf="password && password.invalid && password.touched">Please enter min 1 number,1 symbol & lenth is 5.....</span>
+                    <label>Confirm password:</label><br />
+                    <input type="password" placeholder="*********" formControlName="conpassword" [(ngModel)]="supconpassword"/><br />
+                    <span *ngIf="conpassword && conpassword.invalid && conpassword.touched">Please enter valide confirm password...</span>
+                  </div>
+                <button class="btnadd" (click)="addSupplier()" >Add</button>
+        </form>
+        </div>
+    </div>
+    </form>

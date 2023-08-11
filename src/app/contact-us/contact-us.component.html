@@ -1,0 +1,58 @@
+
+<div className='header'>
+    <app-navbar *ngIf="!isLoggedIn"></app-navbar>
+        <app-navbar-user *ngIf="isLoggedIn"></app-navbar-user>
+    <img alt="ContactImg" src="assets\Images\ContactUsimg.avif">
+ </div>
+<div class="contactUs">
+    <div class="contactUsLeft">
+        <img src="assets/Images/ContactMiddleImg4.png" alt="img">
+        <div class="info">
+            <h1>Address</h1>
+            <p>
+                M/S. Ganpati Foods, Shop no.1,
+                <br/>
+                Link road, Indralok Apartment ,<br />
+                near gawde petrol pump, Chinchwad,
+                <br />
+                Pune Maharashtra- 411033.
+            </p>
+            <h1>Let's Talk</h1>
+            <p><i class="fa fa-phone" aria-hidden="true"></i>+91 9552339276</p>
+            <h1>General Support</h1>
+            <p><i class="fa fa-envelope-o" aria-hidden="true"></i>ranjeetsahu@gmail.com</p>
+    
+        </div>
+    </div>
+    
+    <div  class="contactUsRight">
+        <div class="fullName">
+            <label>Tell Us Your Name</label><br/>
+            <input type="text" placeholder="First Name" required [(ngModel)]="contfname">
+            <input type="text" placeholder="Last Name" required [(ngModel)]="contlname">
+        </div>
+        <div class="Email">
+            <label>Enter Your Email</label><br/>
+            <span></span>
+            <input type="email" placeholder="Eg.example@gmail.com" [(ngModel)]="contemail">
+
+        </div>
+        <div class="phone">
+            <label>Enter Phone Number</label><br/>
+            <input type="number" placeholder="Eg.8888800000" [(ngModel)]="contmobile">
+
+        </div>
+        <div class="message">
+            <label>Message</label><br/>
+            <textarea placeholder="write us a message" [(ngModel)]="contdesc"></textarea>
+
+        </div>
+
+        <button class="contactSendbtn" (click)="addContactUS()">Send</button>
+        
+    </div>
+
+</div>
+<div>
+    <app-footer-page></app-footer-page>  
+ </div>

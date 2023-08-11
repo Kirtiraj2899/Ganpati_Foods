@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ganpatidb-88734": {
+      "hosting": {
+        "Ganapati-Food": [
+          "ganpatidb-88734"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ganpatidb-88734"
+  }
+}

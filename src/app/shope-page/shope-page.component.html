@@ -1,0 +1,13 @@
+
+<div className='header'>
+    <app-navbar *ngIf="!isLoggedIn"></app-navbar>
+    <app-navbar-user *ngIf="isLoggedIn"></app-navbar-user>
+    <img alt="ShopeImg" src="assets/Images/Feedbackimg.avif">
+    <div className='header-text'>
+        <app-shop-card></app-shop-card>
+    </div>
+ </div>
+ <div>
+    
+    <app-footer-page></app-footer-page>  
+ </div>

@@ -1,0 +1,47 @@
+<div>
+    <app-navbar *ngIf="!isLoggedIn"></app-navbar>
+    <app-navbar-user *ngIf="isLoggedIn"></app-navbar-user>
+</div>
+<div class="container">
+    <h1>Checking Out Product</h1>
+    <div class="diveder"></div>
+    <img src="assets/Images/shippingImg.avif">
+    <div class="shippingAddress">   
+        <div class="diveder1"></div>
+        <h3>Shipping Address</h3>   
+        
+        <div class="name">
+            <div class="firstName">
+                <label>First Name </label><br/>
+                <input type="text" [(ngModel)]="newShippingAddress.firstname">
+            </div>
+            <div class="lastName">
+                <label>Last Name</label><br/>
+                <input type="text" [(ngModel)]="newShippingAddress.lastname">
+            </div>
+        </div>
+       
+        <div class="mobNumber">
+            <label>Mobile Number</label><br/>
+            <input type="text" [(ngModel)]="newShippingAddress.mobile">
+        </div>
+        <div class="alterMob">
+            <label>Alternate Number</label><br/>
+            <input type="text" [(ngModel)]="newShippingAddress.alternate">
+        </div>
+        <div class="ShippingAddress">
+            <label>Shipping Address</label><br/>
+            <textarea [(ngModel)]="newShippingAddress.address"></textarea>
+        </div>
+        <div class="zip">
+            <label>Zip Code</label><br/>
+            <input type="text" [(ngModel)]="newShippingAddress.zipCode">
+        </div>
+        <div class="diveder1"></div>
+        <div class="btnProceedPay">
+            <button (click)="addShippingAddress()" routerLink="/paymentgateway">Proceed to Payment</button>
+        </div>
+        
+
+    </div>
+</div>

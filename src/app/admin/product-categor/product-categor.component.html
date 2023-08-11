@@ -1,0 +1,35 @@
+<div class="container-fluid page">
+  <div class="page_box">Category</div>
+  <div class="page_content">
+    <h1>Add New Category</h1>
+    <div class="page_content_data">
+      <label>Category Name:</label>
+      <input type="text" id="pname" name="pname" [(ngModel)]="catname" />
+      <button class="btnadd" (click)="addProdCategory()">Add</button>
+    </div>
+
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Sr.No.</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let prodCategory of prodCategoryList; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ prodCategory.catname }}</td>
+            <td class="action">
+              <span
+                (click)="deleteProdCaategory(prodCategory)" class="btndelete" ><i class="fa fa-trash" aria-hidden="true"></i>
+            </span>
+             
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

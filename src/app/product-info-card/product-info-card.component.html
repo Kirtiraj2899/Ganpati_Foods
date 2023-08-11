@@ -1,0 +1,14 @@
+<div class="conatainer" > 
+    <div class="card" fxLayout="row wrap">
+        <div class="content" fxFlex="45%" *ngFor="let product of productsList">   
+            <div class="img">
+                <img src={{product.pimage}} >
+             </div>
+             <div class="info" >
+                 <h1>{{product.pwgt}}</h1>
+                 <p class="desc">{{(showMore) ? product.pdescription : product.pdescription | slice:0:200}} <span *ngIf="!showMore">...</span><a *ngIf="!showMore" (click)="showMore=true">[Show More]</a></p>
+             </div>
+        </div>
+    </div>
+</div>
+

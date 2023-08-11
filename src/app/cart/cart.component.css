@@ -1,0 +1,151 @@
+
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+}
+
+th,td{
+    margin: 10px 0 10px 0;
+    border-bottom: 1px solid black;
+}
+
+
+
+ h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+ }
+h5{
+    font-size: 1rem;
+}
+
+
+.center img{
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    outline: none;
+    height: 162px;
+    width: 250px;
+    margin: 20px 0px;
+}
+
+.desc{
+    width: 20%;
+   
+}
+
+.center .btnShop{
+    background: blue;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.container{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: -32%;
+}
+
+.table{
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.qty{
+    font-size: 1rem;
+    border: 1px solid black;
+    height: 18px;
+}
+
+.qty .btnqtyinc{
+    font-size: 0.9rem;
+    border: none;
+    border-right: 1px solid black;
+    margin-right: 5px;
+}
+
+.qty .btnqtydecs{
+    font-size: 0.9rem;
+    border: none;
+    border-left: 1px solid black;
+    margin-left: 5px;
+}
+
+.proimage{
+    width: 125px;
+    height: 125px;
+}
+
+.card-table{
+    position: relative;
+    display: flex;  
+    flex-direction: column;
+    min-width: none;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid black;
+    border-radius: .25rem;
+}
+
+.btnremoveItem{
+    background: red;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px 10px 5px 10px;
+}
+
+.btnEmptyCart{
+    background: red;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btnEmptyCart:hover{
+    background: rgb(173, 4, 4);
+}
+
+.btnShopMore{
+    background: blue;
+    color: #fff;
+    width: 100px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btnShopMore:hover{
+    background: rgb(5, 5, 180);
+}
+
+.btnCheckout{
+    background: green;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btnCheckout:hover{
+    background: rgb(24, 216, 24);
+}
+
+
+

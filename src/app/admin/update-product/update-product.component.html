@@ -1,0 +1,35 @@
+
+<div class="container-fluid page">
+  <div class="page_box ">Product</div>
+  <div class="page_content">
+      <h1>Add New Product</h1>
+      <form name="addProduct">
+      <div class="page_content_data">
+          
+          <label>Product Comapany Name:</label>
+          <input type="text" id="pcompanyname" name="pcompanyname" [(ngModel)]="pcompanyname" >
+          <label>Product category</label>
+          <select id="pcategory" name="pcategory"  [(ngModel)]="pcategory" >
+              <option *ngFor="let prodCategory of prodCategoryList">{{ prodCategory.catname }}</option>
+          </select>
+          <label>Net weight:</label>
+          <input type="text" id="pname" name="pname" [(ngModel)]="pwgt">
+          <label>Product Description</label>
+          <textarea placeholder="Description" id="pdescription" name="pdescription" [(ngModel)]="pdescription"></textarea>
+          <label>Product Selling Price</label>
+          <input type="number" id="psellprice" name="psellprice" [(ngModel)]="psellprice">
+          <label>Product Purchase Rate</label>
+          <input type="number" id="ppurchprice" name="ppurchprice" [(ngModel)]="ppurchprice">
+          <label>Product Image</label>
+          <div class="prof">
+             <input type="file" id="pimage" name="pimage"  (change)="onselectFile($event)"  [(ngModel)]="pimage" >
+             <img [src]="url" height="100" [(ngModel)]="pimage" *ngIf="url">
+          </div>
+          <label>Product Quantity</label>
+          <input type="number" id="pquantity" name="pquantity" [(ngModel)]="pquantity">
+          <button class="btnadd" (click)="updateProduct()" >Add</button>
+          
+      </div>
+  </form>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<form [formGroup]="shopReg">
+  <div class="customerForm">
+    <div>
+      <app-navbar></app-navbar>
+    </div>
+      <h2>Shop Registration</h2>
+      <div class="customerContainer">
+        
+          <label class="labelprof">Profile Picture:</label><br/>
+          <img [src]="url" [(ngModel)]="sprofile">
+          <i id="proficon" class="fa fa-pencil" aria-hidden="true"  (click)="fileUploader.click()"  [(ngModel)]="sprofile"></i><br>
+          <input class="imgfile" type="file" id="myprofile" (change)="onselectFile($event)"  name="myfile" #fileUploader [(ngModel)]="sprofile"/>
+          <label>Full Name:</label><br/>
+          <input type="text" placeholder="Eg. Misty Shenoy" formControlName="fullname" [(ngModel)]="sname"/><br/>
+          <span *ngIf="fullname && fullname.invalid&& fullname.touched">Please enter valide fullname..</span ><br />
+          <label>Mobile Number:</label><br/>
+          <input type="number" placeholder="9890123776" formControlName="contact" [(ngModel)]="smobile"/><br/>
+          <span *ngIf="contact && contact.invalid && contact.touched">Please enter valide mobile number...</span><br />
+          <label>Email:</label><br/>
+          <input type="email" placeholder="mistyshenoy@gmail.com" formControlName="email" [(ngModel)]="semail"/><br/>
+          <span *ngIf="email && email.invalid && email.touched">Please enter valide email...</span><br />
+          <label>Address:</label><br/>
+          <input type="text" placeholder="flt.1 krushna nagar pune" formControlName="address" [(ngModel)]="saddress"/><br/>
+          <span *ngIf="address && address.invalid && address.touched">Please enter valide address...</span><br />
+          
+          <label>GST No. :</label><br/>
+          <input type="text" placeholder="Eg. 22AAAAA0000A1Z5" formControlName="age" [(ngModel)]="sgst"/><br/>
+          <span *ngIf="age && age.invalid && age.touched">Please enter valide GST No.</span><br />
+          <label>Password:</label><br/>        
+           <input [type]="showPwd?'text':'password'" placeholder="********" formControlName="password" [(ngModel)]="spassword" />
+          <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="showPwd" (click)="passwordToggle()"></i>
+          <i class="fa fa-eye" aria-hidden="true" *ngIf="!showPwd" (click)="passwordToggle()"></i><br/>
+          <span *ngIf="password && password.invalid && password.touched">Please enter min 1 number,1 symbol & lenth is 5.....</span><br/>        
+          
+          <label>Confirm password:</label><br/>
+          <input [type]="showPwd?'text':'password'" placeholder="*********"  [(ngModel)]="sconpassword"/>
+          <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="showPwd" (click)="passwordToggle()"></i>
+          <i class="fa fa-eye" aria-hidden="true" *ngIf="!showPwd" (click)="passwordToggle()"></i><br/>
+        
+          <input type="Submit" value="Register" (click)="addShop()" >
+           <div class="signin_link">
+              Already Account ? <a (click)="openDialogSignIn()" >Sign In</a>
+          </div>
+      </div>
+      
+    </div>
+  </form>
+  <div>
+    <app-footer-page></app-footer-page>  
+  </div>

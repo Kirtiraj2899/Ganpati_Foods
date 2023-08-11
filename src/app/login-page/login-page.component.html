@@ -1,0 +1,27 @@
+<div class="login-container">
+    <h1>Login</h1>
+    <div class="login_middle">
+        <div class="txt-field">
+            <input type="text" name="email" [(ngModel)]="email">
+            <span></span>
+            <label>Username</label>
+        </div>
+        
+        <div class="txt-field">
+            <div>
+                <input [type]="showPwd?'text':'password'" [(ngModel)]="password">
+                <span></span>
+                <label>Password</label>
+            </div>
+            <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="showPwd" (click)="passwordToggle()"></i>
+            <i class="fa fa-eye" aria-hidden="true" *ngIf="!showPwd" (click)="passwordToggle()"></i>
+        </div>
+        <div class="For-pass" >
+            <a (click)="openDialog()" class="forgotLink">Forgate Password?</a>
+        </div>
+        <input type="Submit" value="Login" (click)="login()" >
+        <div class="signup_link">
+            Create Account ? <a href="#">Sign Up</a>
+        </div>
+    </div>
+</div>

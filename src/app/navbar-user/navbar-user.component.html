@@ -1,0 +1,41 @@
+
+<header>
+    <div class="container">
+       <div class="logo">
+        <img src="assets/Icon/Logo1.png" alt="logo">
+       </div>
+       <div class="menu_icon" [class.menu_icon_class]="menu_icon_variable" (click)="openMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+       </div>
+       <div class="menu"  >
+        <ul >
+          <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class="fa fa-home" aria-hidden="true"></i><a routerLink="/" >Home</a></li>
+          <li routerLinkActive="active"><i class="fa fa-info-circle" aria-hidden="true"></i><a routerLink="/about" >About</a></li>
+          <li routerLinkActive="active"><i class="fa fa-briefcase" aria-hidden="true"></i><a routerLink="/product" >Product</a></li>
+          <li routerLinkActive="active"><i class="fa fa-building" aria-hidden="true"></i><a routerLink="/shop" >Shop</a></li>
+          <li routerLinkActive="active"><i class="fa fa-address-book" aria-hidden="true"></i><a routerLink="/contactus" >ContactUs</a></li>
+         
+         <div routerLink="/cart"> 
+          <p class="total-cart">{{totalItems}}</p>
+          <li ><i id="cartIcon" class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+          <p class="cart" >Cart</p>
+         </div>
+         <li>
+            <img src="assets/Images/UserImage.png" alt="image" class="user-image ">
+            <button mat-button [matMenuTriggerFor]="menu" class="user"> 
+                <mat-icon class="user-image-iconml-1">keyboard_arrow_down</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="logout()">
+                    <mat-icon>exit_to_app</mat-icon>
+                    Logout
+                </button>
+            </mat-menu>
+        </li>
+        </ul>
+        
+       </div>
+    </div>
+  </header>

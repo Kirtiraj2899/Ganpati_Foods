@@ -1,0 +1,51 @@
+mat-toolbar{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #f7f7f7;
+}
+
+mat-toolbar-row{
+    justify-content: space-between;
+}
+
+mat-toolbar-row .row{
+    margin-right: 2px;
+    margin-left: auto;
+
+}
+
+ul li{
+    list-style: none;
+}
+
+button{
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.user{
+    font-size: 1rem;
+    margin-top: 2px;
+    align-items: center;
+}
+
+.user-image{
+    margin-right: 1px ;
+    padding: 2px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+
+
+.user-image-icon{
+    height: 18px;
+    font-size: 0.9rem;
+}
+
+::ng-deep .mat-menu-content{
+    width: 160px;
+}

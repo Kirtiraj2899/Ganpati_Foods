@@ -1,0 +1,30 @@
+
+.content{
+    display: flex;
+    height: 200px;
+    background: white;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .25);
+    border-radius: 10px;
+    margin: 10px 0px 10px 50px;
+}
+
+.conatainer .img{
+    margin: 20px 20px 0 20px;
+    height: 160px;
+    width: 160px;
+}
+
+.info{
+    width: 60%;
+}
+.desc{
+    height: 80px;
+}
+
+
+
+.conatainer h1{
+    font-weight: 700;
+    margin: 20px 0 10px 0;
+}
+

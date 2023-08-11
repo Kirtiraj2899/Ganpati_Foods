@@ -1,0 +1,37 @@
+<div class="container">
+<mat-nav-list>
+    <div class="logo">
+        <img src="assets/Icon/Logo1.png" alt="Logo">
+    </div>
+    <mat-divider></mat-divider>
+    <h2 matSubheader class="mt-2">GANPATI FOOD</h2>
+    <div class="list">
+        <a   routerLink="/admindashboard" routerLinkActive="list-item-active">
+            <mat-icon>dashboard</mat-icon>Dashboard
+        </a>
+        <div class="Dropdown">
+            <li routerLinkActive="active"><i class="fa fa-product-hunt" aria-hidden="true"></i>User </li>
+            <div class="dropdown-content">
+              <a routerLink="/admincustomer" routerLinkActive="list-item-active">Customer View </a>
+              <a routerLink="/shopview" routerLinkActive="list-item-active">Shop/Hotel View </a>       
+            </div>
+         </div>
+        <!-- <a  routerLink="/addSupplier/" routerLinkActive="list-item-active">
+            <mat-icon>face</mat-icon>Supplier
+        </a> -->
+        <a  routerLink="/prodCat" routerLinkActive="list-item-active">
+            <mat-icon>book</mat-icon>Category
+        </a>
+        <div class="Dropdown">
+            <li routerLinkActive="active"><i class="fa fa-product-hunt" aria-hidden="true"></i>Product </li>
+            <div class="dropdown-content">
+              <a routerLink="/addproduct" routerLinkActive="list-item-active">Add Product </a>
+              <a routerLink="/productview" routerLinkActive="list-item-active">View Product </a>       
+            </div>
+         </div>
+        <a  routerLink="/feedbackview" routerLinkActive="list-item-active">
+            <mat-icon>feedback</mat-icon>Feedback
+        </a>
+    </div>
+</mat-nav-list>
+</div>

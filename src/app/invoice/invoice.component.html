@@ -1,0 +1,72 @@
+
+
+  <!-- <div class="headernav">
+    <app-navbar *ngIf="!isLoggedIn"></app-navbar>
+    <app-navbar-user *ngIf="isLoggedIn"></app-navbar-user>
+  </div> -->
+
+  <section class="main-pd-wrapper" style="width: 700px; margin: auto">
+    <div class="container">
+    <div class="headerInfo">
+      <img src="assets/Icon/Logo1.png" alt="lOGO" class="logo">
+      <h1 class="compName">Ganpati Foods</h1>
+    </div>
+
+    <!-- Invoice Header -->
+    
+    <p class="address">JQJR+6Q2,Ganpati Foods, Gawade Nagar,
+      Pimpri-chinchwad Link Road, <br/>Opp to Gawade petrol
+      pump, Pune - 411033.
+      </p>
+      <h1 class="invoice">Invoice</h1>
+      <div class="contactInfo">
+        <p><b>Mobile: </b> 9370071738</p>
+        <p><b>Email: </b>ranjitsahu29@gmail.com</p>
+      </div>
+    <p><b>GSTIN: </b>33AAKFD6082D1ZM</p>
+    <p><b>FSSAI NO: </b> 21520174000469</p><br>
+    <hr><br/>
+    
+  <p class="date"><b>Date :</b>{{ currentDate | date:'medium' }}</p><br/>
+  
+    
+    <!-- Invoice Items Table -->
+    <table style="width: 100%; table-layout: fixed">
+      <thead>
+        <tr>
+          <th>S.No.</th>
+          <th>Product Name</th>
+          <th>Category</th>
+          <th>Weight</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of billItems, ,let i=index"  class="invoice-items">
+          <th scope="row">{{i+1}}</th>
+          <td>{{ item.pcompanyname }}</td>
+          <td>{{ item.pcategory }}</td>
+          <td>{{ item.pwgt }}</td>
+          <td>{{item.psellprice}}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.total }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Total Amount Table -->
+    <table style="width: 100%; background: #fcbd024f; border-radius: 4px;" >
+      <thead>
+        <tr class="table-footer">
+          <th>Total Amount</th>
+          <th style="text-align: right;">₹ {{ totalAmount | number: '1.2-2' }}</th>
+        </tr>
+      </thead>
+      
+    </table>
+  </div>
+    <button  (click)="printPage()"><i class="fa fa-download" aria-hidden="true"></i>Print</button>
+  </section>
+  

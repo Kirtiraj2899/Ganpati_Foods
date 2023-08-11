@@ -1,0 +1,11 @@
+<div>
+    <app-navbar *ngIf="!isLoggedIn"></app-navbar>
+        <app-navbar-user *ngIf="isLoggedIn"></app-navbar-user>
+</div>
+<div class="container">
+    <h2>Payment Gateway</h2>
+    <button (click)="processPayment()"  routerLink="/Invoice">Make Payment</button>
+    <div *ngIf="paymentStatus !== null">
+    Payment Status: {{ paymentStatus ? 'Successful' : 'Failed' }}
+    </div>
+</div>

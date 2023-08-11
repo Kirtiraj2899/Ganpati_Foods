@@ -1,0 +1,42 @@
+
+<div class="container-fluid page">
+    <div class="page_box ">Product Views</div>
+    <div class="page_content">
+        <div class="page_content_data">
+            <input class="searchbox" type="text" placeholder="Search Here" [(ngModel)]="searchText">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" >Sr.No.</th>
+                        <th scope="col" >Product Company Name</th>
+                        <th scope="col" >Product Category</th>
+                        <th scope="col" >Product Weight</th>
+                        <th scope="col" >Product Description</th>
+                        <th scope="col" >Product Selling Price</th>
+                        <th scope="col" >Product Purchase Rate</th>
+                        <th scope="col" >Product Image</th>
+                        <th scope="col" >Product Quantity</th>
+                        <th scope="col" >Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of productsList | search : searchText ,let i=index ">        
+                        <th scope="row">{{i+1}}</th>
+                        
+                        <td  >{{product.pcompanyname}}</td>
+                        <td  >{{product.pcategory}}</td>
+                        <td  >{{product.pwgt}}</td>
+                        <td  >{{product.pdescription}}</td>
+                        <td  >{{product.psellprice}}</td>
+                        <td  >{{product.ppurchprice}}</td>
+                        <td  ><p (change)="onselectFile($event)"><img  src="{{product.pimage}}" /></td>
+                        <td  >{{product.pquantity}}</td>
+                        <td class="action">
+                            <span (click)="deleteProduct(product)" class="btndelete"><i class="fa fa-trash" aria-hidden="true"></i></span> &nbsp;
+                            <span (click)="onEditProduct(product)"  class="btnedit"  ><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

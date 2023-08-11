@@ -1,0 +1,28 @@
+
+<div class="container">
+  <input class="searchbox" type="text" placeholder="Search Product Here" [(ngModel)]="searchText">
+  <div class="card" fxLayout="row wrap" >
+    <div class="content" *ngFor="let product of productsList | search : searchText" fxFlex="25%" >
+      <div class="cardHeader">
+        <img  src="{{product.pimage}}" />
+        <h2>{{product.pcompanyname}} {{product.pcategory}} {{product.pwgt}}</h2>
+      </div>
+      
+      <div class="desc" >
+        <p>{{(showMore) ? product.pdescription : product.pdescription | slice:0:200}} <span *ngIf="!showMore">...</span><a *ngIf="!showMore" (click)="showMore=true">[Show More]</a></p>   
+          
+      </div>
+      
+      <label class="avlQty">Available Quantity: {{product.pquantity}}</label>
+      
+      <div class="diveder"></div>
+      <div class="cart-footer">
+          <p class="price" >₹ {{product.psellprice}}</p>
+          <div>
+            <i id="wishicon" class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-cart-plus" aria-hidden="true" (click)="addToCart(product)"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

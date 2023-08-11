@@ -1,0 +1,57 @@
+
+
+<div class="aboutpage">
+    <div class="header">
+        <app-navbar *ngIf="!isLoggedIn"></app-navbar>
+        <app-navbar-user *ngIf="isLoggedIn"></app-navbar-user>
+      <img alt="Homeimg" src="assets/Images/Aboutimg.jpg">
+    </div>
+<div class="aboutMiddle">
+    <div class="aboutInfo">
+        <h1>Our Story</h1>
+      <p>
+        Founded in the year 2007 by Mr.Ranjeet Kumar sahu and his wife
+        Mrs.Supriya Ranjit Kumar Sahu, Ganpati foods provide with fresh
+        dairy products at your doorstep or shopstep. We started it to
+        provide a solution to people who are looking for wholesale dairy
+        products, healthier versions, and even lesser chemical content in
+        their dairy routine. <br/>We take pride in the fact that we don’t let
+        contamination and compromises come in the way of the Dairy Product
+        Distribution. Starting from a small township in Pune, today we serve
+        customers all across Pune. Our vision turned into our passion to
+        provide services to the shops and customers looking for high quality
+        and fresh Dairy Products.
+      </p>
+    </div>
+    <div class="aboutImg">
+        <img src="assets/Images/Aboutdistimg.png" alt="About Image">
+      
+    </div>
+  </div>
+  <div class="twoaboutMiddle">
+        <h1>Hour of operation</h1>
+        <marquee speed="100">
+        <div class="aboutHours">
+            <p>Sunday To Saturday<br/>6am to 2pm & 6pm to 10pm</p>  
+        </div>
+        </marquee>
+    </div>
+    <div class="aboutBottom"> 
+        <h1>Our Team</h1>
+        <div class="aboutFounder">
+            <div class="aboutFounder1">
+                <img src="assets/Images/founder.jpeg" alt="Founder1">
+                <h2>Founder</h2>
+                <p>Mr. Ranjit Kumar Sahu</p>
+            </div>
+            <div class="aboutFounder2">
+            <img src="assets/Images/founder2.jpeg" alt="Founder1">
+            <h2>Co-Founder</h2>
+            <p>Mrs. Supriya Ranjit Kumar Sahu</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <app-footer-page></app-footer-page>  
+     </div>
+    

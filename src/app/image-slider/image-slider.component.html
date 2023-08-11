@@ -1,0 +1,7 @@
+<div class="slider-container">
+    <div class="slider" [style.transform]="'translateX(' + slideOffset + 'px)'">
+      <div class="slide" *ngFor="let image of images">
+        <img [src]="image" alt="Slide {{ image }}" />
+      </div>
+    </div>
+  </div>

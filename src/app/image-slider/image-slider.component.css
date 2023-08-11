@@ -1,0 +1,20 @@
+/* image-slider.component.css */
+.slider-container {
+    width: 80%; /* Set the desired width for the slider container */
+    margin: 0 auto; /* Center the slider horizontally */
+    overflow: hidden; /* Hide overflow to display one image at a time */
+  }
+  
+  .slider {
+    display: flex; /* Create a horizontal flex container for slides */
+    transition: transform 0.5s ease-in-out; /* Add smooth slide transition */
+  }
+  
+  .slide {
+    flex: 0 0 100%; /* Set the width of each slide to 100% of the container */
+  }
+  
+  .slide img {
+    width: 100%; /* Make sure images fill the slide completely */
+    height: auto; /* Make sure images maintain their aspect ratio */
+  }

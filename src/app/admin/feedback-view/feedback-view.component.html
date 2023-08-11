@@ -1,0 +1,31 @@
+
+<div class="container-fluid page">
+    <div class="page_box ">Feedback</div>
+    <div class="page_content">
+        <div class="page_content_data">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" >Sr.No.</th>
+                        <th scope="col" >Name</th>
+                        <th scope="col" >Email</th>
+                        <th scope="col" >Description</th>
+                        <th scope="col" >Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let feedback of feedbackList,let i=index">        
+                        <th scope="row">{{i+1}}</th>
+                        <td  >{{feedback.fname}}</td>
+                        <td  >{{feedback.femail}}</td>
+                        <td  >{{feedback.fdesc}}</td>
+                        <td class="action">
+                            <span (click)="deleteFeedback(feedback)" class="btndelete"><i class="fa fa-trash" aria-hidden="true"></i></span> &nbsp;
+                           
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button (click)="exportToExcel()">Export to Excel</button>
+        </div>
+    </div>

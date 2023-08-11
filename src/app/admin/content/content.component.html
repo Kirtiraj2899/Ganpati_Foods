@@ -1,0 +1,31 @@
+
+<div class="container-fluid page">
+    <div class="page_box ">Content Management</div>
+    <div class="page_content">
+        <h1>Add New Content</h1>
+        <form name="addProduct">
+        <div class="page_content_data">
+            
+            <label>Mobile :</label>
+            <input type="text" id="pcompanyname" name="contentMobile" [(ngModel)]="contentMobile">
+            <label>Email ID : </label>
+            <input type="text" id="pname" name="contentEmail" [(ngModel)]="contentEmail" >
+            <label>Address : </label>
+            <input type="text" id="pname" name="contentAddress" [(ngModel)]="contentAddress" >
+            <label>Founder Image</label>
+            <div class="prof">
+               <input type="file" id="pimage" name="founderimage"  (change)="onselectFile($event)"  [(ngModel)]="founderimage " >
+               <img [src]="url" height="100" [(ngModel)]="founderimage " *ngIf="url">
+            </div>
+            <label>Cofounder Image</label>
+            <div class="prof">
+               <input type="file" id="pimage" name="cofounderimage"  (change)="onselectFile($event)"   >
+               <img [src]="url" height="100"  >
+            </div>
+            <button class="btnadd" (click)="addContent()" >Add</button>
+            
+        </div>
+    </form>
+    </div>
+</div>
+
